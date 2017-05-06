@@ -9,6 +9,6 @@ package orderer;
  *
  * @author jaknd
  */
-public interface Orderer<T> {
-    boolean isLOE(T left, T right);
+public interface Orderer {
+    boolean isLOE(Object left, Object right);
 }
