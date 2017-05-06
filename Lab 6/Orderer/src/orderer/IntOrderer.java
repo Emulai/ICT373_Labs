@@ -19,8 +19,12 @@ public class IntOrderer implements Orderer {
             {
                 return true;
             }
+            else
+            {
+                return false;
+            }
         }
-        
+        //Exception thrown if not Integer
         return false;
     }
     

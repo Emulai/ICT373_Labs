@@ -26,8 +26,12 @@ public class PairOrderer implements Orderer {
             {
                 return true;
             }
+            else
+            {
+                return false;
+            }
         }
-        
+        //Exception thrown if not Pair
         return false;
     }
 }
