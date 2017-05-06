@@ -10,8 +10,16 @@ package orderer;
  * @author jaknd
  */
 public class PairOrderer implements Orderer {
+
+    /**
+     *
+     * @param left
+     * @param right
+     * @return
+     * @throws IllegalArgumentException
+     */
     @Override
-    public boolean isLOE(Object left, Object right)
+    public boolean isLOE(Object left, Object right) throws IllegalArgumentException
     {
         if ((left instanceof Pair) && (right instanceof Pair))
         {
@@ -31,7 +39,6 @@ public class PairOrderer implements Orderer {
                 return false;
             }
         }
-        //Exception thrown if not Pair
-        return false;
+        throw new IllegalArgumentException();
     }
 }
