@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package orderer;
-
+import java.util.ArrayList;
 /**
  *
  * @author jaknd
@@ -16,6 +16,11 @@ public class OrdererMain {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+    }
+    
+    public static void minOf(ArrayList list, Orderer order)
+    {
+        
     }
     
 }
