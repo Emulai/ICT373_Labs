@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--<html>
+  <head>
+    <title>ICT373 Lab Three</title>
+  </head>
+  <body>
+  
+    <a href="#t_boxes">Go To Text Boxes</a>
+  
+    <h2 id="t_boxes">Text Boxes</h2>
+    <form action="http://www.it.murdoch.edu.au/cgi-bin/reply1.pl" method="post">
+      Input Box 1
+      <input type="textarea" name="box1"><br>
+      Input Box 2
+      <input type="textarea" name="box2"><br>
+      <input type="submit" value="Submit">
+    </form>
+  
+  </body>
+</html>-->
+
+<html>
+  <head>
+    <title>ICT373 Lab Three</title>
+  </head>
+  <body>
+  
+    <a href="#t_boxes">Go To Text Boxes</a>
+  
+    <h2 id="t_boxes">Text Boxes</h2>
+    <form action="http://www.it.murdoch.edu.au/cgi-bin/reply1.pl" method="post">
+      Input Box 1
+      <input type="text" name="box1" id="box1"><br>
+      Input Box 2
+      <input type="text" name="box2" id="box2"><br>
+      <input type="button" value="Add" onclick="doThis();">
+    </form>
+    
+    <script>
+    function doThis()
+    {
+      event.preventDefault();
+      var i, j, result;
+      i = +document.getElementById("box1").value;
+      j = +document.getElementById("box2").value;
+      if (isNaN(i)){
+        result = "Not a number";
+        alert("Input Box 1: " + result);
+        document.getElementById("box1").value = result;
+      }else if (isNaN(j)){
+        result = "Not a number";
+        alert("Input Box 2: " + result);
+        document.getElementById("box2").value = result;
+      }else{
+        result = (i + j);
+        document.getElementById("box2").value = result;
+      }
+    }
+    </script>
+  
+  </body>
+</html>
+Test6
