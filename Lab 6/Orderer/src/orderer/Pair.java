@@ -39,4 +39,11 @@ public class Pair {
         this.right = right;
     }
     
+    @Override
+    public String toString()
+    {
+        String out = ("(" + left + "," + right + ")");
+        return out;
+    }
+    
 }

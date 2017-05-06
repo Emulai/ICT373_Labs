@@ -37,6 +37,35 @@ public class OrdererMain {
         intList.add(-37);
         
         System.out.println(minOf(intList, intOrder));
+        
+        Orderer pairOrder = new PairOrderer();
+        ArrayList pairList = new ArrayList();
+        Pair pair1 = new Pair(5, 8);
+        pairList.add(pair1);
+        
+        Pair pair2 = new Pair(67, 90);
+        pairList.add(pair2);
+        
+        Pair pair3 = new Pair(-34, 66);
+        pairList.add(pair3);
+        
+        Pair pair4 = new Pair(-34, 65);
+        pairList.add(pair4);
+        
+        Pair pair5 = new Pair(25, 27);
+        pairList.add(pair5);
+        
+        Pair pair6 = new Pair(54, 89);
+        pairList.add(pair6);
+        
+        Pair pair7 = new Pair(-20, 20);
+        pairList.add(pair7);
+        
+        Pair pair8 = new Pair(55, 45);
+        pairList.add(pair8);
+        
+        System.out.println(minOf(pairList, pairOrder));
+        
     }
     
     public static Object minOf(ArrayList list, Orderer order)
