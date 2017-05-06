@@ -10,8 +10,16 @@ package orderer;
  * @author jaknd
  */
 public class IntOrderer implements Orderer {
+
+    /**
+     *
+     * @param left
+     * @param right
+     * @return
+     * @throws IllegalArgumentException
+     */
     @Override
-    public boolean isLOE(Object left, Object right)
+    public boolean isLOE(Object left, Object right) throws IllegalArgumentException
     {
         if ((left instanceof Integer) && (right instanceof Integer))
         {
@@ -24,8 +32,7 @@ public class IntOrderer implements Orderer {
                 return false;
             }
         }
-        //Exception thrown if not Integer
-        return false;
+        throw new IllegalArgumentException();
     }
     
 }

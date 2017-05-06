@@ -10,5 +10,5 @@ package orderer;
  * @author jaknd
  */
 public interface Orderer {
-    boolean isLOE(Object left, Object right);
+    boolean isLOE(Object left, Object right) throws IllegalArgumentException;
 }

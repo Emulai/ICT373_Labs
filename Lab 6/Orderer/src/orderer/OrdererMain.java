@@ -72,16 +72,23 @@ public class OrdererMain {
     {
         Object min = null;
         
-        for (Object temp : list)
+        try{
+            for (Object temp : list)
+            {
+                if (min == null)
+                {
+                    min = temp;
+                }
+
+                if (order.isLOE(temp, min))
+                {
+                    min = temp;
+                }
+            }
+        }catch(IllegalArgumentException i)
         {
-            if (min == null)
-            {
-                min = temp;
-            }
-            if (order.isLOE(temp, min))
-            {
-                min = temp;
-            }
+            System.out.println("Incorrect argument type: " + i);
+            return null;
         }
         return min;
     }
