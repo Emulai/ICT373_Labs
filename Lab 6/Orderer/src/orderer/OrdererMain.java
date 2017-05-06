@@ -15,17 +15,28 @@ public class OrdererMain {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Orderer order = new StringOrderer();
-        ArrayList string = new ArrayList();
-        string.add("Cat");
-        string.add("Dog");
-        string.add("Antelope");
-        string.add("Aardvark");
-        string.add("Apple");
-        string.add("Zebra");
-        string.add("Horse");
+        Orderer stringOrder = new StringOrderer();
+        ArrayList stringList = new ArrayList();
+        stringList.add("Cat");
+        stringList.add("Dog");
+        stringList.add("Antelope");
+        stringList.add("Aardvark");
+        stringList.add("Apple");
+        stringList.add("Zebra");
+        stringList.add("Horse");
         
-        System.out.print(minOf(string, order));
+        System.out.println(minOf(stringList, stringOrder));
+        
+        Orderer intOrder = new IntOrderer();
+        ArrayList intList = new ArrayList();
+        intList.add(50);
+        intList.add(60);
+        intList.add(0);
+        intList.add(100);
+        intList.add(23);
+        intList.add(-37);
+        
+        System.out.println(minOf(intList, intOrder));
     }
     
     public static Object minOf(ArrayList list, Orderer order)
