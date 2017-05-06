@@ -15,7 +15,17 @@ public class OrdererMain {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Orderer order = new StringOrderer();
+        ArrayList string = new ArrayList();
+        string.add("Cat");
+        string.add("Dog");
+        string.add("Antelope");
+        string.add("Aardvark");
+        string.add("Apple");
+        string.add("Zebra");
+        string.add("Horse");
+        
+        System.out.print(minOf(string, order));
     }
     
     public static Object minOf(ArrayList list, Orderer order)
