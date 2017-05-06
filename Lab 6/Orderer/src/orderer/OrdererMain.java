@@ -18,9 +18,22 @@ public class OrdererMain {
         // TODO code application logic here
     }
     
-    public static void minOf(ArrayList list, Orderer order)
+    public static Object minOf(ArrayList list, Orderer order)
     {
+        Object min = null;
         
+        for (Object temp : list)
+        {
+            if (min == null)
+            {
+                min = temp;
+            }
+            if (order.isLOE(temp, min))
+            {
+                min = temp;
+            }
+        }
+        return min;
     }
     
 }
