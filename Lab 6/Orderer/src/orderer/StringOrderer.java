@@ -13,8 +13,19 @@ public class StringOrderer implements Orderer {
     @Override
     public boolean isLOE(Object left, Object right)
     {
-        
-        
+        if ((left instanceof String) && (right instanceof String))
+        {
+            String leftString = (String)left;
+            if (leftString.compareToIgnoreCase((String)right) < 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        //Throw exception if not String
         return false;
     }
 }
